@@ -89,6 +89,11 @@ type variableProperties struct {
 			Whole_static_libs []string
 		}
 
+		Target_surfaceflinger_udfps_lib struct {
+			Whole_static_libs []string
+			Cppflags []string
+		}
+
 		// debuggable is true for eng and userdebug builds, and can be used to turn on additional
 		// debugging features that don't significantly impact runtime behavior.  userdebug builds
 		// are used for dogfooding and performance testing, and should be as similar to user builds
@@ -379,6 +384,8 @@ type productVariables struct {
 	BoardUsesRecoveryAsBoot *bool `json:",omitempty"`
 
 	Target_init_vendor_lib  *string `json:",omitempty"`
+
+	Target_surfaceflinger_udfps_lib *string `json:",omitempty"`
 
 	BoardKernelBinaries                []string `json:",omitempty"`
 	BoardKernelModuleInterfaceVersions []string `json:",omitempty"`
